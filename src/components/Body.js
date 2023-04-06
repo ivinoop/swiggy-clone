@@ -49,6 +49,7 @@ const Body = () => {
       <div className='flex justify-between items-center mx-8 my-2'>
         <div className='p-4 my-2 text-center'>
           <input
+            data-testid='search-input'
             type='text'
             className='px-2 py-2 w-80 bg-white border border-slate-300 rounded-lg text-sm shadow-sm placeholder-slate-400'
             placeholder='Search your favorites'
@@ -58,6 +59,7 @@ const Body = () => {
             }}
           />
           <button
+            data-testid='search-btn'
             className='py-2 px-3 m-2 bg-green-700 text-white text-sm rounded-xl'
             onClick={() => {
               const data = filterRestaurants(searchInput, allRestaurants)
@@ -98,7 +100,10 @@ const Body = () => {
           {/* <p>⚡️ ⚡️</p> */}
         </div>
       </div>
-      <div className='flex flex-wrap justify-center items-start mx-1'>
+      <div
+        data-testid='res-list'
+        className='flex flex-wrap justify-center items-start mx-1'
+      >
         {filteredRestaurants.map((restaurant) => {
           return (
             <Link

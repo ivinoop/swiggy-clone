@@ -13,9 +13,9 @@ const Cart = () => {
   return (
     <>
       <div className='w-96 mt-8 flex justify-between items-center mx-auto'>
-        <h1 className='text-2xl font-bold text-center'>
+        <h3 className='text-2xl font-bold text-center'>
           Cart Items - {cartItems.length}
-        </h1>
+        </h3>
         <div className='bg-red-600 text-white px-2 py-1 rounded-md flex justify-between items-center'>
           <button onClick={() => handleClearCart()}>Clear Cart</button>
           <button className='ml-1'>

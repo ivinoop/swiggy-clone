@@ -8,13 +8,14 @@ import { useSelector } from 'react-redux'
 
 export const Title = () => {
   return (
-    <a href='/'>
+    <Link to='/'>
       <img
         src={Logo}
         className='h-12 w-12 m-2 rounded-full border-solid border-2 border-amber-900'
         alt=''
+        data-testid='logo'
       />
-    </a>
+    </Link>
   )
 }
 
@@ -25,10 +26,10 @@ const Header = () => {
   const { user } = useContext(UserContext)
 
   const cartItems = useSelector((store) => store.cart.items)
-  console.log(cartItems);
+  console.log(cartItems)
 
   return (
-    <div className='sticky top-0 bg-white border border-b-[1] shadow-md flex p-2 justify-between items-center'>
+    <div className='sticky top-0 bg-white flex p-2 justify-between items-center'>
       <Title />
       <div className='mx-6'>
         <ul className='flex justify-center items-center'>
@@ -49,7 +50,7 @@ const Header = () => {
               <Link to='/cart'>
                 <ShoppingCartIcon className='h-4 w-4' />
               </Link>
-              <Link to='/cart' className='pl-1'>
+              <Link data-testid='cart' to='/cart' className='pl-1'>
                 Cart - {cartItems.length}
               </Link>
             </div>
@@ -75,7 +76,10 @@ const Header = () => {
           <p className='text-sm mr-1'>
             Hello, {user.name}! ({user.email})
           </p>
-          <p className='bg-slate-300 px-2 py-1 rounded-2xl text-xs'>
+          <p
+            data-testid='online-status'
+            className='bg-slate-300 px-2 py-1 rounded-2xl text-xs'
+          >
             {isOnline ? `You're online 🟢` : `You're offline 🔴`}
           </p>
         </div>
