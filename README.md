@@ -17,5 +17,5 @@
   - In case of any issues, check the `package.json` file for each package's version.
 - **IMPORTANT** --> Install the CORS extension on your browser (preferably Chrome), and toggle the extension to "ON".
 - Once the packages are installed and you have toggled the CORS extension, run `npm start` in the terminal.
-  - Parcel will specify a port on which the app is running, usually `localhost:1234` by default
+  - Parcel will specify a port on which the app is running, usually `localhost:1234` by default.
 - Check out the features and funcionalities of the app, and do leave a feedback by opening a PR on this repo.
