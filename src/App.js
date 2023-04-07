@@ -16,9 +16,8 @@ import { Provider } from 'react-redux'
 import store from './utils/store'
 import Cart from './components/Cart'
 
-// Lazy loading the component 👇
-const Instamart = lazy(() => import('./components/Instamart'))
-
+// Lazy loading the components 👇
+const InstaMart = lazy(() => import('./components/InstaMart'))
 const About = lazy(() => import('./components/About'))
 
 const AppLayout = () => {
@@ -79,7 +78,7 @@ const appRouter = createBrowserRouter([
         path: '/instamart',
         element: (
           <Suspense fallback={<Shimmer />}>
-            <Instamart />
+            <InstaMart />
           </Suspense>
         ),
       },
