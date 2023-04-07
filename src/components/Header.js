@@ -8,14 +8,14 @@ import { useSelector } from 'react-redux'
 
 export const Title = () => {
   return (
-    <Link to='/'>
+    <a href='/'>
       <img
         src={Logo}
         className='h-12 w-12 m-2 rounded-full border-solid border-2 border-amber-900'
         alt=''
         data-testid='logo'
       />
-    </Link>
+    </a>
   )
 }
 
